@@ -1,0 +1,662 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Star Bright Agency | Agricultural Equipment & Machinery Coimbatore</title>
+    <meta name="description" content="Trusted supplier of heavy-duty power tillers, weeders, chaff cutters, battery sprayers, and rotavators in Coimbatore. High-quality machinery designed for modern farming.">
+    
+    <!-- CSS stylesheet -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Font Awesome for modern icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+
+    <!-- Glassmorphism Header -->
+    <header>
+        <a href="#home" class="logo-container">
+            <i class="fas fa-seedling logo-icon"></i>
+            <div class="logo">STAR BRIGHT <span>AGENCY</span></div>
+        </a>
+
+        <nav id="nav-links">
+            <a href="#home" class="active">Home</a>
+            <a href="#about">About</a>
+            <a href="#products">Products</a>
+            <a href="#testimonials">Reviews</a>
+            <a href="#faq">FAQ</a>
+            <a href="#contact">Contact</a>
+        </nav>
+
+        <div class="header-controls">
+            <!-- Dark / Light Mode Toggle Button -->
+            <button class="theme-toggle-btn" id="theme-toggle" aria-label="Toggle Theme">
+                <i class="fas fa-moon"></i>
+                <i class="fas fa-sun"></i>
+            </button>
+            <a href="tel:+919894534357" class="header-cta">
+                <i class="fas fa-phone-alt"></i> Call Now
+            </a>
+            <!-- Mobile Menu Toggle Button -->
+            <button class="hamburger" id="hamburger-menu" aria-label="Open Menu">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </header>
+
+    <!-- Hero Section with Indian Farmer Field Background -->
+    <section id="home" class="hero" style="background-image: linear-gradient(rgba(15, 36, 25, 0.7), rgba(10, 17, 13, 0.85)), url('images/media__1781020177193.jpg');">
+        <div class="hero-content">
+            <div class="section-tag" style="color: var(--accent);">Empowering Indian Agriculture</div>
+            <h1>Premium <span>Farming Machinery</span> & Equipment</h1>
+            <p>
+                Equipping farmers in Coimbatore and across Tamil Nadu with high-durability, fuel-efficient power tillers, weeders, and crop processing tools.
+            </p>
+            <div class="buttons">
+                <a href="#products" class="btn btn-primary">
+                    <i class="fas fa-shopping-basket"></i> Browse Catalog
+                </a>
+                <button class="btn btn-whatsapp" onclick="openQuoteModal('General Inquiry')">
+                    <i class="fab fa-whatsapp"></i> Request Quote
+                </button>
+                <a href="tel:+919894534357" class="btn btn-outline">
+                    <i class="fas fa-phone"></i> Call Dealer
+                </a>
+            </div>
+        </div>
+        <div class="scroll-indicator" id="scroll-down">
+            <i class="fas fa-chevron-down"></i>
+        </div>
+    </section>
+
+    <!-- About Section with Indian Farmers in Field Image -->
+    <section id="about" class="section about">
+        <div class="about-grid">
+            <div class="about-content">
+                <span class="section-tag">About Star Bright</span>
+                <h2>Trusted Agricultural Partners Since 2016</h2>
+                <div class="section-underline" style="margin: 15px 0 25px;"></div>
+                <p>
+                    Based in Coimbatore, Star Bright Agency is a leading supplier of modern agricultural machinery. We serve local farmers and agricultural businesses by supplying quality equipment built to withstand rigorous field operations. 
+                </p>
+                <p style="margin-top: -15px;">
+                    Our product line includes high-performance power weeders, high-horsepower power tillers, heavy-duty chaff cutters, electric sprayers, and rotavators. We prioritize fuel efficiency, solid iron frame construction, and user safety.
+                </p>
+                
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <div class="number">10+</div>
+                        <div class="label">Years Experience</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="number">5,000+</div>
+                        <div class="label">Happy Farmers</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="number">100%</div>
+                        <div class="label">Spares & Support</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="about-visual" style="display: flex; flex-direction: column; gap: 20px;">
+                <div style="border-radius: 24px; overflow: hidden; border: 1px solid var(--border-color); box-shadow: var(--card-shadow); height: 320px;">
+                    <img src="images/media__1781020177210.jpg" alt="Indian farmer working with chaff cutter machine in a field" style="width: 100%; height: 100%; object-fit: cover;">
+                </div>
+                
+                <div class="features-list">
+                    <div class="feature-item">
+                        <div class="feature-icon"><i class="fas fa-check"></i></div>
+                        <div class="feature-text">
+                            <h4>Field Demonstration Available</h4>
+                            <p>We provide full on-site testing and training before delivery.</p>
+                        </div>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon"><i class="fas fa-tools"></i></div>
+                        <div class="feature-text">
+                            <h4>Genuine Spare Parts Stocked</h4>
+                            <p>Get original components and prompt repair service in Coimbatore.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Interactive Products Section -->
+    <section id="products" class="section products-section">
+        <div class="section-header">
+            <span class="section-tag">Interactive Catalog</span>
+            <h2>Our High-Quality Equipment</h2>
+            <div class="section-underline"></div>
+        </div>
+
+        <div class="catalog-controls">
+            <!-- Interactive Search Bar -->
+            <div class="search-bar">
+                <i class="fas fa-search"></i>
+                <input type="text" id="product-search" placeholder="Search machine, type, or engine horsepower...">
+            </div>
+
+            <!-- Category Filter Tags -->
+            <div class="filter-tags">
+                <span class="filter-tag active" data-category="all">All Equipment</span>
+                <span class="filter-tag" data-category="tillage">Soil Tillage</span>
+                <span class="filter-tag" data-category="weeding">Weeding Tools</span>
+                <span class="filter-tag" data-category="spraying">Spraying</span>
+                <span class="filter-tag" data-category="processing">Crop Processing</span>
+            </div>
+        </div>
+
+        <!-- Product Grid -->
+        <div class="product-grid" id="product-catalog">
+            
+            <!-- Card 1: Power Weeder -->
+            <div class="card" data-category="weeding" data-search="power weeder petrol 7hp cultivator weeding">
+                <div class="card-img-container">
+                    <img src="images/media__1781020219377.jpg" alt="Power Weeder">
+                    <span class="card-badge">Top Seller</span>
+                </div>
+                <div class="card-body">
+                    <h3>Power Weeder</h3>
+                    <div class="card-spec-summary">
+                        <span><i class="fas fa-tachometer-alt"></i> 7.0 HP Petrol Engine</span>
+                        <span><i class="fas fa-arrows-alt-h"></i> 3.0 Feet Cultivation Width</span>
+                        <span><i class="fas fa-fill-drip"></i> 3.6 Liters Fuel Capacity</span>
+                    </div>
+                    <div class="card-footer">
+                        <button class="card-btn card-btn-outline" onclick="viewSpecs('weeder')">Details</button>
+                        <button class="card-btn card-btn-primary" onclick="openQuoteModal('Power Weeder')">Inquire</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 2: Power Tiller -->
+            <div class="card" data-category="tillage" data-search="power tiller 12hp diesel heavy duty tillage">
+                <div class="card-img-container">
+                    <img src="images/media__1781020269900.png" alt="Power Tiller">
+                    <span class="card-badge">Heavy Duty</span>
+                </div>
+                <div class="card-body">
+                    <h3>Power Tiller</h3>
+                    <div class="card-spec-summary">
+                        <span><i class="fas fa-tachometer-alt"></i> 12.0 HP Diesel Engine</span>
+                        <span><i class="fas fa-cogs"></i> Gear Driven Transmission</span>
+                        <span><i class="fas fa-key"></i> Key-Start System</span>
+                    </div>
+                    <div class="card-footer">
+                        <button class="card-btn card-btn-outline" onclick="viewSpecs('tiller')">Details</button>
+                        <button class="card-btn card-btn-primary" onclick="openQuoteModal('Power Tiller')">Inquire</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 3: Chaff Cutter -->
+            <div class="card" data-category="processing" data-search="chaff cutter fodder grass processing feed">
+                <div class="card-img-container">
+                    <img src="images/media__1781020354393.png" alt="Chaff Cutter">
+                    <span class="card-badge">Fodder Tool</span>
+                </div>
+                <div class="card-body">
+                    <h3>Chaff Cutter</h3>
+                    <div class="card-spec-summary">
+                        <span><i class="fas fa-bolt"></i> 2.0 HP Electric Motor</span>
+                        <span><i class="fas fa-weight-hanging"></i> 500-700 kg/hr Capacity</span>
+                        <span><i class="fas fa-cut"></i> 3 Carbon Steel Blades</span>
+                    </div>
+                    <div class="card-footer">
+                        <button class="card-btn card-btn-outline" onclick="viewSpecs('chaff')">Details</button>
+                        <button class="card-btn card-btn-primary" onclick="openQuoteModal('Chaff Cutter')">Inquire</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 4: Petrol Power Tiller -->
+            <div class="card" data-category="tillage" data-search="petrol power tiller 9hp soil tillage">
+                <div class="card-img-container">
+                    <img src="images/media__1781020233508.png" alt="Petrol Power Tiller">
+                    <span class="card-badge">Efficient</span>
+                </div>
+                <div class="card-body">
+                    <h3>Petrol Power Tiller</h3>
+                    <div class="card-spec-summary">
+                        <span><i class="fas fa-tachometer-alt"></i> 9.0 HP Petrol Engine</span>
+                        <span><i class="fas fa-arrows-alt-h"></i> 4.0 Feet Cultivation Width</span>
+                        <span><i class="fas fa-gas-pump"></i> Low Fuel Consumption</span>
+                    </div>
+                    <div class="card-footer">
+                        <button class="card-btn card-btn-outline" onclick="viewSpecs('petrol_tiller')">Details</button>
+                        <button class="card-btn card-btn-primary" onclick="openQuoteModal('Petrol Power Tiller')">Inquire</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 5: Diesel Power Tiller -->
+            <div class="card" data-category="tillage" data-search="diesel power tiller 15hp heavy tillage">
+                <div class="card-img-container">
+                    <img src="images/media__1781020269900.png" alt="Diesel Power Tiller">
+                    <span class="card-badge">Max Power</span>
+                </div>
+                <div class="card-body">
+                    <h3>Diesel Power Tiller</h3>
+                    <div class="card-spec-summary">
+                        <span><i class="fas fa-tachometer-alt"></i> 15.0 HP Diesel Engine</span>
+                        <span><i class="fas fa-cog"></i> 6 Forward + 2 Reverse Gears</span>
+                        <span><i class="fas fa-tint"></i> Water-Cooled Cooling</span>
+                    </div>
+                    <div class="card-footer">
+                        <button class="card-btn card-btn-outline" onclick="viewSpecs('diesel_tiller')">Details</button>
+                        <button class="card-btn card-btn-primary" onclick="openQuoteModal('Diesel Power Tiller')">Inquire</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 6: Battery Sprayer -->
+            <div class="card" data-category="spraying" data-search="battery sprayer electric backpack crop spraying pest">
+                <div class="card-img-container">
+                    <img src="images/media__1781020364807.png" alt="Battery Sprayer">
+                    <span class="card-badge">Pest Control</span>
+                </div>
+                <div class="card-body">
+                    <h3>Battery Sprayer</h3>
+                    <div class="card-spec-summary">
+                        <span><i class="fas fa-car-battery"></i> 12V 8Ah Rechargeable Battery</span>
+                        <span><i class="fas fa-fill-drip"></i> 16 Liters Tank Capacity</span>
+                        <span><i class="fas fa-clock"></i> 4-5 Hours Continuous Run</span>
+                    </div>
+                    <div class="card-footer">
+                        <button class="card-btn card-btn-outline" onclick="viewSpecs('sprayer')">Details</button>
+                        <button class="card-btn card-btn-primary" onclick="openQuoteModal('Battery Sprayer')">Inquire</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 7: Rotavator -->
+            <div class="card" data-category="tillage" data-search="rotavator tractor attachment blades tillage">
+                <div class="card-img-container">
+                    <img src="images/media__1781020260309.png" alt="Rotavator">
+                    <span class="card-badge">Tractor Addon</span>
+                </div>
+                <div class="card-body">
+                    <h3>Rotavator</h3>
+                    <div class="card-spec-summary">
+                        <span><i class="fas fa-cog"></i> 42 High-Carbon L-Blades</span>
+                        <span><i class="fas fa-compress-arrows-alt"></i> 6.0 Feet Working Width</span>
+                        <span><i class="fas fa-tractor"></i> Requires 40-50 HP Tractor</span>
+                    </div>
+                    <div class="card-footer">
+                        <button class="card-btn card-btn-outline" onclick="viewSpecs('rotavator')">Details</button>
+                        <button class="card-btn card-btn-primary" onclick="openQuoteModal('Rotavator Attachment')">Inquire</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 8: Rotavator Blade -->
+            <div class="card" data-category="tillage" data-search="rotavator blade steel spares replacement">
+                <div class="card-img-container">
+                    <img src="images/media__1781020247891.png" alt="Rotavator Blade">
+                    <span class="card-badge">Genuine Spare</span>
+                </div>
+                <div class="card-body">
+                    <h3>Rotavator Blade</h3>
+                    <div class="card-spec-summary">
+                        <span><i class="fas fa-shield-alt"></i> High-Durability Alloy Steel</span>
+                        <span><i class="fas fa-thermometer-half"></i> 50-52 HRC Heat Treated</span>
+                        <span><i class="fas fa-check-circle"></i> Precision Fit 12mm Holes</span>
+                    </div>
+                    <div class="card-footer">
+                        <button class="card-btn card-btn-outline" onclick="viewSpecs('blade')">Details</button>
+                        <button class="card-btn card-btn-primary" onclick="openQuoteModal('Rotavator Blades Set')">Inquire</button>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Testimonials Slider Section -->
+    <section id="testimonials" class="section testimonials">
+        <div class="section-header">
+            <span class="section-tag">Farmer Reviews</span>
+            <h2>Tested by Real Farmers</h2>
+            <div class="section-underline"></div>
+        </div>
+
+        <div class="carousel-container">
+            <div class="testimonial-track" id="testimonial-track">
+                <!-- Slide 1 -->
+                <div class="testimonial-card">
+                    <div class="testimonial-stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="testimonial-text">
+                        "I purchased the 12 HP Power Tiller from Star Bright Agency last year. The machine makes tilling the paddy fields so much easier. The team provided a full field demo in Pollachi and helped me understand the gearbox."
+                    </p>
+                    <div class="testimonial-user">
+                        <div class="testimonial-avatar">K</div>
+                        <span class="testimonial-name">Karuppusamy M.</span>
+                        <span class="testimonial-location">Rice Farmer, Pollachi</span>
+                    </div>
+                </div>
+                <!-- Slide 2 -->
+                <div class="testimonial-card">
+                    <div class="testimonial-stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="testimonial-text">
+                        "The 7 HP petrol power weeder is highly efficient. I use it in my coconut grove in Udumalpet. Fuel consumption is very low compared to larger tractors, and it turns beautifully in tight spaces. Best investment."
+                    </p>
+                    <div class="testimonial-user">
+                        <div class="testimonial-avatar">S</div>
+                        <span class="testimonial-name">Subramanian R.</span>
+                        <span class="testimonial-location">Coconut Grove Owner, Udumalpet</span>
+                    </div>
+                </div>
+                <!-- Slide 3 -->
+                <div class="testimonial-card">
+                    <div class="testimonial-stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                    <p class="testimonial-text">
+                        "Highly recommend their chaff cutters. Star Bright helped deliver it directly to my farm near Thudiyalur. It cuts green fodder quickly and has significantly reduced feed waste for my dairy cows."
+                    </p>
+                    <div class="testimonial-user">
+                        <div class="testimonial-avatar">P</div>
+                        <span class="testimonial-name">Palanisamy K.</span>
+                        <span class="testimonial-location">Dairy Farmer, Thudiyalur</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="carousel-dots" id="carousel-dots">
+                <!-- Dots injected via JS -->
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Accordion Section -->
+    <section id="faq" class="section faq">
+        <div class="section-header">
+            <span class="section-tag">Frequently Asked Questions</span>
+            <h2>Got Questions? We Have Answers</h2>
+            <div class="section-underline"></div>
+        </div>
+
+        <div class="faq-container">
+            <div class="faq-item">
+                <button class="faq-question">
+                    Do you provide a warranty on your machinery?
+                    <span class="faq-icon"><i class="fas fa-chevron-down"></i></span>
+                </button>
+                <div class="faq-answer">
+                    <div class="faq-answer-content">
+                        Yes, all our power weeders and power tillers come with a standard 12-month manufacturer warranty on the engine and transmission parts. Chaff cutters and batteries have a 6-month warranty.
+                    </div>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question">
+                    How can I book a live field demonstration?
+                    <span class="faq-icon"><i class="fas fa-chevron-down"></i></span>
+                </button>
+                <div class="faq-answer">
+                    <div class="faq-answer-content">
+                        You can request a demonstration by filling out the quote inquiry form or sending a message on WhatsApp. We arrange on-field testing for farmers located within a 50 km radius of Coimbatore.
+                    </div>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question">
+                    Are replacement blades and spares readily available?
+                    <span class="faq-icon"><i class="fas fa-chevron-down"></i></span>
+                </button>
+                <div class="faq-answer">
+                    <div class="faq-answer-content">
+                        Yes, we maintain a fully-stocked warehouse in Coimbatore with genuine replacement parts including rotavator blades, belts, spark plugs, carburetors, and tiller tires.
+                    </div>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question">
+                    Do you provide transport and doorstep delivery?
+                    <span class="faq-icon"><i class="fas fa-chevron-down"></i></span>
+                </button>
+                <div class="faq-answer">
+                    <div class="faq-answer-content">
+                        We can arrange transport delivery directly to your farm across Tamil Nadu and neighbouring states. Transport charges are calculated based on actual distance from our office.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section contact">
+        <div class="contact-grid">
+            <div class="contact-info">
+                <span class="section-tag">Get In Touch</span>
+                <h2>Contact Our Agency Today</h2>
+                <div class="section-underline" style="margin: 15px 0 25px;"></div>
+                <p>
+                    Have questions about machinery specifications or dealer prices? Feel free to call us, send a message on WhatsApp, or visit our showroom in Coimbatore.
+                </p>
+
+                <div class="contact-details">
+                    <div class="contact-detail-item">
+                        <div class="contact-detail-icon"><i class="fas fa-map-marker-alt"></i></div>
+                        <div class="contact-detail-text">
+                            <h4>Showroom Location</h4>
+                            <p>67, Ambiga Layout, New Siddhapudur, Coimbatore - 641044, Tamil Nadu</p>
+                        </div>
+                    </div>
+                    <div class="contact-detail-item">
+                        <div class="contact-detail-icon"><i class="fas fa-phone-alt"></i></div>
+                        <div class="contact-detail-text">
+                            <h4>Phone Number</h4>
+                            <p><a href="tel:+919894534357">+91 98945 34357</a></p>
+                        </div>
+                    </div>
+                    <div class="contact-detail-item">
+                        <div class="contact-detail-icon"><i class="fas fa-envelope"></i></div>
+                        <div class="contact-detail-text">
+                            <h4>Email Address</h4>
+                            <p><a href="mailto:starbrightagency@gmail.com">starbrightagency@gmail.com</a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Custom interactive Contact Form -->
+            <div class="contact-form-card">
+                <h4>Send Us a Message</h4>
+                <form id="direct-contact-form">
+                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px;">
+                        <div class="form-group">
+                            <label for="contact-name">Your Name</label>
+                            <input type="text" id="contact-name" required placeholder="e.g. Ramesh Kumar">
+                        </div>
+                        <div class="form-group">
+                            <label for="contact-phone">Phone Number</label>
+                            <input type="tel" id="contact-phone" required placeholder="e.g. 9876543210">
+                        </div>
+                    </div>
+                    <div class="form-group" style="margin-top: 15px;">
+                        <label for="contact-msg">Your Message</label>
+                        <textarea id="contact-msg" rows="4" required placeholder="Describe what you are looking for..."></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary" style="margin-top: 10px; width: 100%; justify-content: center;">
+                        <i class="fas fa-paper-plane"></i> Send via WhatsApp
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-top">
+            <div class="footer-brand">
+                <h3>STAR BRIGHT AGENCY</h3>
+                <p>Leading provider of agricultural power tillers, weeders, chaff cutters, and rotavators in Coimbatore. Improving farming yields through machinery.</p>
+                <div class="footer-socials">
+                    <a href="#" class="footer-social-link"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="footer-social-link"><i class="fab fa-instagram"></i></a>
+                    <a href="https://wa.me/919894534357" class="footer-social-link"><i class="fab fa-whatsapp"></i></a>
+                </div>
+            </div>
+
+            <div class="footer-links">
+                <h4>Quick Navigation</h4>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About Us</a></li>
+                    <li><a href="#products">Equipment Catalog</a></li>
+                    <li><a href="#testimonials">Customer Reviews</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-links">
+                <h4>Farming Machinery</h4>
+                <ul>
+                    <li><a href="#products">Power Tiller</a></li>
+                    <li><a href="#products">Power Weeder</a></li>
+                    <li><a href="#products">Chaff Cutter</a></li>
+                    <li><a href="#products">Battery Sprayer</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>© 2026 Star Bright Agency. All Rights Reserved. Designed for modern Indian farming.</p>
+            <p>Coimbatore, Tamil Nadu, India</p>
+        </div>
+    </footer>
+
+    <!-- Floating Contact Tools -->
+    <a class="floating-whatsapp" href="https://wa.me/919894534357?text=Hi%20Star%20Bright%20Agency,%20I'm%20interested%20in%20your%20agricultural%20machinery." target="_blank" aria-label="WhatsApp Us">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+    
+    <button class="scroll-top-btn" id="scroll-to-top" aria-label="Scroll to top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- Collapsible Inquiry Logs Tracker (Simulated Local Database) -->
+    <button class="inquiry-drawer-toggle" id="inquiry-drawer-btn">
+        <i class="fas fa-history"></i> Inquiry Logs (<span id="inquiry-count">0</span>)
+    </button>
+
+    <div class="inquiry-drawer" id="inquiry-drawer">
+        <div class="inquiry-drawer-header">
+            <h3>Recent Inquiries</h3>
+            <button class="inquiry-drawer-close" id="inquiry-drawer-close"><i class="fas fa-times"></i></button>
+        </div>
+        <div class="inquiry-list" id="inquiry-list-container">
+            <!-- Dynamically injected inquiries -->
+            <div class="inquiry-empty">No inquiries made yet in this browser session.</div>
+        </div>
+    </div>
+
+    <!-- Product Details Specifications Modal -->
+    <div class="modal-overlay" id="specs-modal">
+        <div class="modal-container">
+            <button class="modal-close" onclick="closeSpecsModal()"><i class="fas fa-times"></i></button>
+            <div class="modal-product-grid">
+                <div class="modal-product-visuals">
+                    <div class="modal-product-img" id="modal-img-holder">
+                        <!-- Injected by JS -->
+                    </div>
+                    <div class="visuals-toggle" id="visuals-toggle-container">
+                        <button class="visuals-toggle-btn active" id="btn-product-shot" onclick="toggleModalVisual('product')">Product Shot</button>
+                        <button class="visuals-toggle-btn" id="btn-working-shot" onclick="toggleModalVisual('working')">See in Action</button>
+                    </div>
+                </div>
+                <div class="modal-product-info">
+                    <span class="modal-tag" id="modal-tag">Tillage</span>
+                    <h3 id="modal-title">Power Tiller</h3>
+                    <p id="modal-desc">Heavy duty tillage machine suitable for wetland plowing, weeding and soil preparation.</p>
+                    
+                    <table class="specs-table" id="modal-specs-table">
+                        <!-- Injected by JS -->
+                    </table>
+
+                    <button class="btn btn-primary" id="modal-quote-btn" style="width: 100%; justify-content: center;">
+                        <i class="fab fa-whatsapp"></i> Request Deal price
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Quote Request Form Modal -->
+    <div class="modal-overlay" id="quote-modal">
+        <div class="modal-container" style="max-width: 600px;">
+            <button class="modal-close" onclick="closeQuoteModal()"><i class="fas fa-times"></i></button>
+            <div class="modal-form-container">
+                <h3>Request Pricing & Info</h3>
+                <p>Complete the form below. We will compile your request and open a chat with you on WhatsApp instantly.</p>
+                
+                <form id="quote-request-form" class="quote-form">
+                    <div class="form-group">
+                        <label for="quote-name">Your Full Name *</label>
+                        <input type="text" id="quote-name" required placeholder="e.g. Karuppasamy">
+                    </div>
+                    <div class="form-group">
+                        <label for="quote-phone">WhatsApp Number *</label>
+                        <input type="tel" id="quote-phone" required placeholder="e.g. 98945xxxxx">
+                    </div>
+                    <div class="form-group">
+                        <label for="quote-email">Email Address</label>
+                        <input type="email" id="quote-email" placeholder="e.g. farmer@gmail.com">
+                    </div>
+                    <div class="form-group">
+                        <label for="quote-product">Selected Machinery *</label>
+                        <select id="quote-product" required>
+                            <option value="General Inquiry">General Machinery Inquiry</option>
+                            <option value="Power Weeder">Power Weeder (7 HP Petrol)</option>
+                            <option value="Power Tiller">Power Tiller (12 HP Diesel)</option>
+                            <option value="Chaff Cutter">Chaff Cutter (2 HP Electric)</option>
+                            <option value="Petrol Power Tiller">Petrol Power Tiller (9 HP)</option>
+                            <option value="Diesel Power Tiller">Diesel Power Tiller (15 HP)</option>
+                            <option value="Battery Sprayer">Battery Sprayer (12V 16L)</option>
+                            <option value="Rotavator Attachment">Rotavator Attachment (6 Feet)</option>
+                            <option value="Rotavator Blades Set">Rotavator Blades Set</option>
+                        </select>
+                    </div>
+                    <div class="form-group form-group-full">
+                        <label for="quote-msg">Message or Requirements *</label>
+                        <textarea id="quote-msg" rows="3" required placeholder="Provide details like delivery location or specific requirements..."></textarea>
+                    </div>
+                    <div class="form-actions">
+                        <button type="button" class="btn btn-outline" onclick="closeQuoteModal()">Cancel</button>
+                        <button type="submit" class="btn btn-primary">
+                            <i class="fab fa-whatsapp"></i> Submit Request
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Script File -->
+    <script src="script.js"></script>
+</body>
+</html>
